@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net" modified="2026-06-08T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram name="4.2.3 System Modules" id="smart-agriculture-423-modules">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Smart Agriculture System Modules" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontFamily=Times New Roman;" vertex="1" parent="1">
+          <mxGeometry x="350" y="30" width="470" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="system" value="Smart Agriculture Application&#xa;React/Vite App + Firebase + ESP32" style="rounded=1;whiteSpace=wrap;html=1;arcSize=10;fillColor=#d9ead3;strokeColor=#38761d;strokeWidth=2;fontSize=16;fontStyle=1;fontFamily=Times New Roman;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="410" y="350" width="350" height="85" as="geometry"/>
+        </mxCell>
+        <mxCell id="m1" value="Module 1&#xa;Sensor Reading Module&#xa;&#xa;Reads soil moisture, TDS raw value, water flow, temperature, humidity, and pressure from ESP32 sensors." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#e2f0d9;strokeColor=#6aa84f;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="70" y="130" width="260" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m2" value="Module 2&#xa;Water Pump Control Module&#xa;&#xa;Supports Auto Mode and Manual Mode. ESP32 controls the relay based on soil condition or app command." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#e2f0d9;strokeColor=#6aa84f;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="455" y="120" width="260" height="160" as="geometry"/>
+        </mxCell>
+        <mxCell id="m3" value="Module 3&#xa;Fertilizer Pump and AI Recommendation Module&#xa;&#xa;Uses selected sensor data to support fertilizer decision-making and keeps fertilizer pump under manual or AI-supported control." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#e2f0d9;strokeColor=#6aa84f;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="835" y="130" width="280" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m4" value="Module 4&#xa;Notification Module&#xa;&#xa;Detects important events such as dry soil, pump activation, irrigation completion, and fertilizer recommendation." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#e2f0d9;strokeColor=#6aa84f;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="220" y="540" width="280" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="m5" value="Module 5&#xa;Trend and Data Visualization Module&#xa;&#xa;Stores interval readings and displays live trend charts and daily summaries for monitoring farm conditions." style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#e2f0d9;strokeColor=#6aa84f;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="675" y="540" width="280" height="150" as="geometry"/>
+        </mxCell>
+        <mxCell id="fb" value="Firebase Realtime Database&#xa;sensorData + pumpControl paths" style="rounded=1;whiteSpace=wrap;html=1;arcSize=8;fillColor=#fff2cc;strokeColor=#bf9000;strokeWidth=2;fontSize=14;fontFamily=Times New Roman;align=center;verticalAlign=middle;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="455" y="740" width="260" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="sends live readings" style="endArrow=block;html=1;rounded=0;strokeColor=#38761d;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="m1" target="system">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="controls pump state" style="endArrow=block;html=1;rounded=0;strokeColor=#38761d;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="system" target="m2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="uses sensor values" style="endArrow=block;html=1;rounded=0;strokeColor=#38761d;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="system" target="m3">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="triggers alerts" style="endArrow=block;html=1;rounded=0;strokeColor=#38761d;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="system" target="m4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="shows trend data" style="endArrow=block;html=1;rounded=0;strokeColor=#38761d;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="system" target="m5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="read/write data" style="endArrow=block;html=1;rounded=0;strokeColor=#bf9000;strokeWidth=2;fontSize=12;fontFamily=Times New Roman;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="system" target="fb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
