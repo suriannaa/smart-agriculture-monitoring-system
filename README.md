@@ -16,6 +16,23 @@ This project explores how a smart agriculture system can help users monitor plan
 - AI fertilizer recommendation concept
 - Survey evaluation and analysis
 
+  ## Screenshots
+
+### Dashboard
+![Dashboard](poster/dashboard-home.jpeg)
+
+### Live Farm Readings
+![Live Farm Readings](poster/live-farm-readings.jpeg)
+
+### Sensor Trend Analysis
+![Sensor Trend Analysis](poster/sensor-trend-analysis.jpeg)
+
+### Irrigation Diagnostics
+![Irrigation Diagnostics](poster/irrigation-summary.jpeg)
+
+### Settings
+![Settings](poster/settings.jpeg)
+
 ## Project Materials
 
 - `diagrams/` - System module diagram
